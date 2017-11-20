@@ -9,7 +9,7 @@ name: Maheen Rashid
 description: PhD Student at UC Davis
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: ./self.jpg
+avatar: self.jpg
 
 #
 # Flags below are optional
@@ -18,12 +18,12 @@ avatar: ./self.jpg
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email:
+  email: mhnrashid@ucdavis.edu
   facebook:
   flickr:
-  github: https://github.com/menoRashid
+  github: menoRashid/
   instagram:
-  linkedin:https://www.linkedin.com/in/maheen-rashid-6a872832/
+  linkedin: maheen-rashid-6a872832/
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter: 

@@ -1,0 +1,46 @@
+---
+layout: default
+---
+<script type="text/javascript">
+<!--
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+     //   var el=document.getElementById(elid);
+	    // aelid=elid+"a";
+	    // ael=document.getElementById(aelid);
+	    // if(el.style.display=='none'){
+	    //   el.style.display='block';
+	    //   ael.innerHTML="[Hide BibTex]";
+	    // }else{
+	    //   el.style.display='none';
+	    //   ael.innerHTML="[Show BibTex]";
+	    // }
+       if(e.style.display == 'none')
+          e.style.display = 'block';
+       else
+          e.style.display = 'none';
+    }
+//-->
+</script>
+
+<div class="posts" >
+	<table style="width:100%">
+	  	{% for post in site.posts %}
+			{% if post.type=='pub'%}
+				<tr>
+					<td align="center" valign="top" style="width:25%">
+						<a href={{post.pdf}} target="_blank"><img src={{site.baseurl}}/{{post.image}}></a>
+					</td>
+					<td style="width:75%">
+						<a href={{post.pdf}} target="_blank">{{post.title}}</a><br>
+		              	{{post.authors| markdownify}}{{post.place}}<br>
+		              	{% if post.github %} [<a href={{post.github}} target="_blank">Github</a>]{% endif %}
+		              	{% if post.github %} [<a href={{post.project_page}} target="_blank">Project Page</a>]{% endif %}
+		              	[<a href={{post.url}} target="_blank">BibTex</a>]
+		              	<br>
+		          	</td>
+		        </tr>
+			{% endif %}
+		{% endfor %}
+	</table>
+</div>
