@@ -4,7 +4,7 @@ layout: default
 <script type="text/javascript">
 <!--
     function toggle_visibility(id) {
-       var e = document.getElementById(id);
+       var e = document.getElementById('bibtex');
      //   var el=document.getElementById(elid);
 	    // aelid=elid+"a";
 	    // ael=document.getElementById(aelid);
@@ -36,7 +36,9 @@ layout: default
 		              	{{post.authors| markdownify}}{{post.place}}<br>
 		              	{% if post.github %} [<a href={{post.github}} target="_blank">Github</a>]{% endif %}
 		              	{% if post.github %} [<a href={{post.project_page}} target="_blank">Project Page</a>]{% endif %}
-		              	[<a href={{post.url}} target="_blank">BibTex</a>]
+		              	[<a href="javascript:toggle_visibility('bibtex')">BibTex</a>]
+		              	<br>
+		              	<p id="bibtex">hello</p>
 		              	<br>
 		          	</td>
 		        </tr>
