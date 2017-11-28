@@ -1,0 +1,120 @@
+---
+layout: default
+---
+<!-- <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="StyleSheet" href="../uploads/2/5/3/8/25385794/style.css" type="text/css" media="all"> 
+ -->
+<title>Interspecies Knowledge Transfer for Facial Keypoint Detection</title> 
+<style type="text/css">
+#primarycontent h1 {
+	font-variant: small-caps;
+}
+#primarycontent h3 {
+}
+#primarycontent teasertext {
+	text-align: center;
+}
+#primarycontent p {
+	text-align: center;
+}
+#primarycontent {
+	text-align: justify;
+}
+#primarycontent p {
+	text-align: justify;
+}
+#primarycontent p iframe {
+	text-align: center;
+}
+.featart {
+  margin:4px;
+}
+</style>
+<script type="text/javascript">
+  function togglevis(elid){
+    el=document.getElementById(elid);
+    aelid=elid+"a";
+    ael=document.getElementById(aelid);
+    if(el.style.display=='none'){
+      el.style.display='inline-table';
+      ael.innerHTML="[Hide BibTex]";
+    }else{
+      el.style.display='none';
+      ael.innerHTML="[Show BibTex]";
+    }
+  }
+</script>
+</head> 
+<body itemscope="" itemtype="http://schema.org/ScholarlyArticle"> 
+<div id="primarycontent"> 
+<p class="hiddenDiv" itemprop="url"></p>
+<h1 align="center" itemprop="name"><strong>Interspecies Knowledge Transfer for Facial Keypoint Detection</strong></h1>
+<h1 align="center"><img src="/images/cvpr_17.jpg" itemprop="image" width="500" alt="teaserImage"></h1>
+<p style="text-align:center;margin-bottom:-15px;font-size:1em;">Main idea. (a) Directly finetuning a human keypoint detector to horses can be suboptimal, since horses and humans have
+very different shapes and appearances. (b) By warping a horse to have a more human-like shape, the pre-trained human keypoint detector can more easily adapt to the horse’s appearance.</a></p>
+<p style="text-align:center;margin-top:30px;margin-bottom:-15px;font-size:1em;font-weight:bold;">Presenting in <a href="http://cvpr2017.thecvf.com/" target="_blank">CVPR 2017</a></p>
+<h3>People</h3>
+
+<ul id="people" itemprop="accountablePerson">
+<li><a href="http://www.maheenrashid.com/">Maheen Rashid</a></li>
+<li>Xiuye Gu</li>
+<li><a href="http://web.cs.ucdavis.edu/~yjlee/">Yong Jae Lee</a></li>
+</ul>
+<h3>Abstract</h3>
+
+
+<p style="padding-left: 10px;	padding-right: 10px;">
+We present a method for localizing facial keypoints on animals by transferring knowledge gained from human faces. Instead of directly finetuning a network trained to detect keypoints in human faces to animal faces (which is sub-optimal since human and animal faces can look quite different), we propose to first adapt the animal images to the pre-trained human detection network by correcting for the differences in animal and human face shape. We first find the nearest human neighbors for each animal image using an unsupervised shape matching method. We use these matches to train a thin plate spline warping network to warp each animal face to look more human-like. The warping network is then jointly finetuned with a pre-trained human facial keypoint detection network using an animal dataset. We demonstrate state-of-the-art results on both horse and sheep facial keypoint detection, and significant improvement over simple finetuning, especially when training data is scarce. Additionally, we present a new dataset with 3717 images with horse face and facial keypoint annotations.
+</p>
+
+
+<h3>Paper</h3>
+
+<ul id="people" itemprop="accountablePerson">
+<li> Maheen Rashid, Xiuye Gu, Yong Jae Lee </li>
+<li><a href="../uploads/2/5/3/8/25385794/3171_final.pdf"><b>Interspecies Knowledge Transfer for Facial Keypoint Detection</b></a></li>
+<li>CVPR 2017</li>
+<li><a href="javascript:togglevis('bibtex')" id="showbib">[Show BibTex]</a></li>
+</ul>
+
+      
+      <table class="bibtex" style="display:none;margin-top:20px;" id="bibtex"><tbody><tr><td>
+          <pre>@inproceedings{rashid2017interspecies,
+  title={Interspecies Knowledge Transfer for Facial Keypoint Detection},
+  author={Rashid, Maheen and Gu, Xiuye and Lee, Yong Jae},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  year={2017}
+}
+          </pre>
+       <!--</div>-->
+       </td></tr></tbody></table>
+<p></p>
+
+<!--<h3 style="clear:both">Video</h3><br/><br/>
+  <iframe width="800" height="450" src="http://www.youtube.com/embed/s5-30NKSwo8?version=3&fs=1&feature=player_embedded&fs=1&hd=1&ap=%2526fmt%3D22" frameborder="1" allowfullscreen></iframe>
+</p>-->
+<h3>Source Code</h3>
+
+<p style="padding-left: 10px;	padding-right: 10px;">
+Data and Code are available <a href="https://github.com/menoRashid/animal_human_kp">here</a>
+</p>
+
+
+
+<h3 style="clear:both">Acknowledgments</h3>
+<p style="padding-left: 10px; padding-right: 10px;">
+This work was supported in part by a gift from the Swedish University of Agricultural Sciences and GPUs donated by NVIDIA.
+</p>
+
+<h3 style="clear:both">Contact</h3>
+<p style="padding-left: 10px; padding-right: 10px;">
+<a href="mailto:mhnrashid@ucdavis.edu" target="_blank">Maheen Rashid</a>
+</p>
+
+</div>
+
+
+
+
+
+<!-- </body></html> -->

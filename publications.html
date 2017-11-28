@@ -3,46 +3,63 @@ layout: default
 ---
 <script type="text/javascript">
 <!--
-    function toggle_visibility(id) {
-       var e = document.getElementById('bibtex');
-     //   var el=document.getElementById(elid);
-	    // aelid=elid+"a";
-	    // ael=document.getElementById(aelid);
-	    // if(el.style.display=='none'){
-	    //   el.style.display='block';
-	    //   ael.innerHTML="[Hide BibTex]";
-	    // }else{
-	    //   el.style.display='none';
-	    //   ael.innerHTML="[Show BibTex]";
-	    // }
-       if(e.style.display == 'none')
-          e.style.display = 'block';
-       else
-          e.style.display = 'none';
+    function toggle_visibility(elid) {
+       // var e = document.getElementById(id);
+       var el=document.getElementById(elid);
+	    aelid=elid+"a";
+	    ael=document.getElementById(aelid);
+	    if(el.style.display=='none'){
+	      el.style.display='block';
+	      ael.innerHTML="[Hide BibTex]";
+	    }else{
+	      el.style.display='none';
+	      ael.innerHTML="[Show BibTex]";
+	    }
+       // if(e.style.display == 'none')
+       //    e.style.display = 'block';
+       // else
+       //    e.style.display = 'none';
     }
 //-->
 </script>
 
 <div class="posts" >
-	<table style="width:100%">
 	  	{% for post in site.posts %}
 			{% if post.type=='pub'%}
+			<table style="width:100%">
+	
 				<tr>
-					<td align="center" valign="top" style="width:25%">
+					<td align="center" valign="top" style="width:25%" id={{post.image}}>
+						{% if post.pdf %}
 						<a href={{post.pdf}} target="_blank"><img src={{site.baseurl}}/{{post.image}}></a>
+						{% else %}
+						<img src={{site.baseurl}}/{{post.image}}>
+						{% endif %}
 					</td>
 					<td style="width:75%">
+						{% if post.pdf %}
 						<a href={{post.pdf}} target="_blank">{{post.title}}</a><br>
-		              	{{post.authors| markdownify}}{{post.place}}<br>
+						{% else %}
+						{{post.title}}<br>
+						{% endif %}
+		              	{{post.authors| markdownify| remove: '<p>' | remove: '</p>' }}<br>{{post.place}}<br>
+		              	{% if post.pdf %} [<a href={{post.pdf}} target="_blank">PDF</a>]{% endif %}
 		              	{% if post.github %} [<a href={{post.github}} target="_blank">Github</a>]{% endif %}
 		              	{% if post.github %} [<a href={{post.project_page}} target="_blank">Project Page</a>]{% endif %}
-		              	[<a href="javascript:toggle_visibility('bibtex')">BibTex</a>]
+		              	{% if post.bibtag %} [<a href="javascript:toggle_visibility('{{post.bibtag}}')">BibTex</a>]{% endif %}
 		              	<br>
-		              	<p id="bibtex">hello</p>
+		              	<!-- <p id={{post.bibtag}}> -->
+		              	<!-- </p> -->
 		              	<br>
 		          	</td>
 		        </tr>
+		        </table>
+		        {% if post.bibtag %}
+		        <table class="bibtex" style="display:none;margin-top:20px;" id={{post.bibtag}}><tbody><tr><td>
+		              	<pre>{{post.content}}</pre>
+		              	</td></tr></tbody></table>
+              	{% endif %}
 			{% endif %}
 		{% endfor %}
-	</table>
+	
 </div>
