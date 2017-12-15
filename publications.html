@@ -26,17 +26,17 @@ layout: default
 <div class="posts" >
 	  	{% for post in site.posts %}
 			{% if post.type=='pub'%}
-			<table style="width:100%">
+			<table style="width:100%;border:1px solid grey;">
 	
 				<tr>
-					<td align="center" valign="top" style="width:25%" id={{post.image}}>
+					<td align="center" valign="top" style="width:25%;" id={{post.image}}>
 						{% if post.pdf %}
 						<a href={{post.pdf}} target="_blank"><img src={{site.baseurl}}/{{post.image}}></a>
 						{% else %}
 						<img src={{site.baseurl}}/{{post.image}}>
 						{% endif %}
 					</td>
-					<td style="width:75%">
+					<td style="width:75%;background-color: #f5f5f5">
 						{% if post.pdf %}
 						<a href={{post.pdf}} target="_blank">{{post.title}}</a><br>
 						{% else %}
@@ -63,7 +63,9 @@ layout: default
 		        <table class="bibtex" style="margin-right:auto;display:none;width:80%;margin-top:20px;font-size:small;" id={{post.bibtag}}><tbody><tr style="background-color: #f5f5f5;border: 0px solid black;"><td>
 		              	<pre>{{post.content| markdownify| remove: '<p>' | remove: '</p>' | strip}}</pre>
 		              	</td></tr></tbody></table>
+
               	{% endif %}
+              	<br>
 			{% endif %}
 		{% endfor %}
 	

@@ -1,3 +1,25 @@
 ---
 layout: default
 ---
+<div class="posts" >
+	  	{% for post in site.posts %}
+			{% if post.type=='press'%}
+			<table style="width:100%;border:1px solid grey;">
+				<tr>
+					<td align="center" valign="top" id={{post.image}}>
+						<a href={{post.link}} target="_blank"><img src={{site.baseurl}}/{{post.image}} height=80px style="display: block;margin-left: auto;margin-right: auto;" ></a><br>
+					</td>
+				</tr>
+				<tr>
+					<td align="center" valign="top" style="text-align:center;background-color: #f5f5f5">
+						<a href={{post.link}} target="_blank">{{post.title| markdownify| remove: '<p>' | remove: '</p>'}}</a><br>
+					</td>
+				</tr>
+	        </table>
+		    <br>
+			{% endif %}
+		{% endfor %}
+	
+</div>
+
+<!-- style="background-color: #f5f5f5;border: 0px solid black;" -->
