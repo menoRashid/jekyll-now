@@ -2,7 +2,7 @@
 layout: page
 title: Hello!
 ---
-I am a PhD student at University of California at Davis, where I am advised by [Dr. Yong Jae Lee](http://web.cs.ucdavis.edu/~yjlee/). I work on automating the detection of pain in horses by using deep convolutional networks. 
+I am a PhD student at University of California at Davis, where I am advised by [Dr. Yong Jae Lee](http://web.cs.ucdavis.edu/~yjlee/). I work on automating the detection of pain in horses by using deep networks. 
 
 I have had the wonderful opportunity of being a visiting research student at KTH Royal Institute of Technology in Stockholm with [Hedvig Kjellström](http://www.csc.kth.se/~hedvig/) and [Pia Haubro Anderson](https://www.slu.se/cv/pia-haubro/) at Swedish Agricultural University for Fall 2018. In Summer 2017 I interned with the lovely Vision/ML team at Yahoo in San Francisco.
         
