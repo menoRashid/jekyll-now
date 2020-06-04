@@ -40,10 +40,12 @@ layout: default
 						{% if post.pdf %}
 						<a href={{post.pdf}} target="_blank">{{post.title}}</a><br>
 						{% else %}
-						{{post.title}}<br>
+						{{post.title| markdownify| remove: '<p>' | remove: '</p>'}}<br>
 						{% endif %}
 		              	{{post.authors| markdownify| remove: '<p>' | remove: '</p>' }}<br>{{post.place}}<br>
+		              	{% if post.comment %} {{post.comment}}<br>{% endif %}
 		              	{% if post.pdf %} [<a href={{post.pdf}} target="_blank">PDF</a>]{% endif %}
+		              	{% if post.poster %} [<a href={{post.poster}} target="_blank">Poster</a>]{% endif %}
 		              	{% if post.github %} [<a href={{post.github}} target="_blank">Github</a>]{% endif %}
 		              	{% if post.github %} [<a href={{post.project_page}} target="_blank">Project Page</a>]{% endif %}
 		              	{% if post.bibtag %} [<a href="javascript:toggle_visibility('{{post.bibtag}}')">BibTex</a>]{% endif %}
