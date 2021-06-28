@@ -3,10 +3,10 @@
 #
 
 # Name of your site (displayed in the header)
-name: Maheen Rashid
+name: Maheen Rashid-Engström
 
 # Short bio or description (displayed in the header)
-description: PhD Candidate at UC Davis
+description: Computer Vision Scientist at Univrses AB
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: self.jpg
@@ -18,7 +18,7 @@ avatar: self.jpg
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: mhnrashid@ucdavis.edu
+  email: maheen.rashid@univrses.com
   facebook:
   flickr:
   github: menoRashid/
